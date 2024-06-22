@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrarse</title> 
+</head>
+<center>
+    <%- include ("./plantillas/nav.ejs") %>
+<body>
+   <h1>registro usuario</h1> 
+
+   <% if(typeof mensaje !== "undefined"){ %>
+    <p>
+        <%= mensaje %>;
+    </p>
+<% } %>
+
+   <form action="/validar" method="post">
+        Cedula:
+        <input type="double" name="cedula" id="cedula" required><br><br>
+        Nombres:
+        <input type="text" name="nombre" id="nombre" required><br><br>
+        Apellidos:
+        <input type="text" name="apellido" id="apellido" required><br><br>
+        Correo:
+        <input type="email" name="correo" id="correo" required><br><br>
+        contraseña:
+        <input type="password" name="password" id="password" required><br><br>
+        <input type="submit" value="Registrar"><br><br>
+    </form>
+</body>
+</center>
+</html>
